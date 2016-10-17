@@ -14,7 +14,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from PlanningSite.views import hello
+from PlanningSite.views import randomGenerator
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^hello/$', hello),
+    url(r'^rando/(\d+)/$', randomGenerator)
 ]
